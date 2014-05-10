@@ -1,0 +1,54 @@
+body {
+	font-size: xx-large;
+	color:white;
+	margin: 0;
+	padding:0;
+	width:5500px;
+	height:100%;
+	overflow-y:hidden;
+}
+
+#home {
+	background: url("about-bg.jpg") 0 50% no-repeat fixed;
+	min-height:1000px;
+	/*height: 1000px;*/
+	height:auto;
+	margin:0 auto;
+	width: 100%;
+	max-width: 1920px;
+	position:relative;
+	box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	float:left;
+}
+
+#home article {
+	/*height:458px;*/
+	height:auto;
+	position: absolute;
+	text-align: center;
+	top:150px;
+	width:100%;
+}
+
+#about {
+	background: url("about2-bg.jpg") 0 50% no-repeat fixed;
+	min-height: 1000px;
+	/*height:1000px;*/
+	height:582px;
+	margin:0 auto;
+	width:100%;
+	max-width: 1920px;
+	position: relative;
+	box-shadow: 0 0 50px rgba(0,0,0,0.8);
+	float:left;
+}
+
+#about article {
+	/*height:458px;*/
+	height:auto;
+	position: absolute;
+	text-align: center;
+	top: 150px;
+	width: 100%;
+}
+
