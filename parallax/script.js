@@ -16,24 +16,24 @@
 // 	});
 // });
 
-// $(document).ready(function(){
-// 	// Cache the Window object
-// 	$window = $(window);
+$(document).ready(function(){
+	// Cache the Window object
+	$window = $(window);
 
-// 	$('section[data-type="background"]').each(function(){
-// 		var $bgobj = $(this); // assigning the object
+	$('section[data-type="background"]').each(function(){
+		var $bgobj = $(this); // assigning the object
 
-// 		$(window).scroll(function(){
+		$(window).scroll(function(){
 
-// 			// Scroll the background at var speed
-// 			// the xPos is a negative value because we're scrolling it UP!
-// 			var xPos = -($window.scrollLeft() / $bgobj.data('speend'));
+			// Scroll the background at var speed
+			// the xPos is a negative value because we're scrolling it UP!
+			var xPos = -($window.scrollLeft() / $bgobj.data('speed'));
 
-// 			// Put together our final backgroud position
-// 			var coords = xPos + 'px 50% ';
+			// Put together our final backgroud position
+			var coords = xPos + 'px 50% ';
 
-// 			// Move the background
-// 			$bgobj.css({ backgroundPosition: coords});
-// 		});
-// 	});
-// });
+			// Move the background
+			$bgobj.css({ backgroundPosition: coords});
+		});
+	});
+});
