@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>97A4720D-A36A-42D0-83AC-145490A5669B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0551C9BB4EC3B950B3751EAB28A13CFDB4792F7F</key>
+		<string>github.com:blee42/brittplay.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>swift/HelloWorld/HelloWorld.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0551C9BB4EC3B950B3751EAB28A13CFDB4792F7F</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:blee42/brittplay.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0551C9BB4EC3B950B3751EAB28A13CFDB4792F7F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0551C9BB4EC3B950B3751EAB28A13CFDB4792F7F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>brittplay</string>
+		</dict>
+	</array>
+</dict>
+</plist>
