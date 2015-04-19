@@ -9,7 +9,10 @@
 import UIKit
 
 class SearchResultsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, APIControllerProtocol {
+    var tableData = []
     let api = APIController()
+    let kCellIdentifier: String = "SearchResultCell"
+    @IBOutlet var appsTableView: UITableView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,34 +32,44 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
             self.appsTableView!.reloadData()
         })
     }
-    
-    @IBOutlet var appsTableView: UITableView?
-    var tableData = []
 
     func tableView (tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.count
     }
     
-    func tableView (tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(kCellIdentifier) as! UITableViewCell
         
-        let rowData: NSDictionary = self.tableData[indexPath.row] as! NSDictionary
-        
-        cell.textLabel?.text = rowData["trackName"] as? String
-        
-        // grab artwork for image URL thumbnail
-        let urlString: NSString = rowData["artworkUrl60"] as! NSString
-        let imgURL: NSURL? = NSURL(string: urlString as String)
-        
-        // download as NSData representation of the image
-        let imgData = NSData(contentsOfURL: imgURL!)
-        cell.imageView?.image = UIImage(data: imgData!)
-        
-        // get formated price string for display
-        let formattedPrice: NSString = rowData["formattedPrice"] as! NSString
-        
-        cell.detailTextLabel?.text = formattedPrice as String
+        if let rowData: NSDictionary = self.tableData[indexPath.row] as? NSDictionary,
+            // grab artwork for image URL thumbnail
+            urlString: NSString = rowData["artworkUrl60"] as? NSString,
+            imgURL: NSURL? = NSURL(string: urlString as String),
+            // download as NSData representation of the image
+            imgData = NSData(contentsOfURL: imgURL!),
+            // get formated price string for display
+            formattedPrice: NSString = rowData["formattedPrice"] as? NSString,
+            trackName = rowData["trackName"] as? String {
+                // get formatted price string for display in the subtitle
+                cell.detailTextLabel?.text = formattedPrice as String
+                // update imageView cell to use the downloaded image data
+                cell.imageView?.image = UIImage(data: imgData)
+                // update the textLabel text to use the trackname from API
+                cell.textLabel?.text = trackName
+            }
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // get row data for the selected row
+        if let rowData = self.tableData[indexPath.row] as? NSDictionary,
+            // get name of the track for this row
+            name = rowData["trackName"] as? String,
+            // get price of the track on this row
+            formattedPrice = rowData["formattedPrice"] as? String {
+                let alert = UIAlertController(title: name, message: formattedPrice, preferredStyle: .Alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            }
     }
 
 }
