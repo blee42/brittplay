@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3814158D1AE3FAAE00D09FD6 /* APIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3814158C1AE3FAAE00D09FD6 /* APIController.swift */; };
 		388149DD1ADDA46E003C0B04 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388149DC1ADDA46E003C0B04 /* AppDelegate.swift */; };
-		388149DF1ADDA46E003C0B04 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388149DE1ADDA46E003C0B04 /* ViewController.swift */; };
+		388149DF1ADDA46E003C0B04 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388149DE1ADDA46E003C0B04 /* SearchResultsViewController.swift */; };
 		388149E21ADDA46E003C0B04 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 388149E01ADDA46E003C0B04 /* Main.storyboard */; };
 		388149E41ADDA46E003C0B04 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 388149E31ADDA46E003C0B04 /* Images.xcassets */; };
 		388149E71ADDA46E003C0B04 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 388149E51ADDA46E003C0B04 /* LaunchScreen.xib */; };
@@ -26,10 +27,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3814158C1AE3FAAE00D09FD6 /* APIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIController.swift; sourceTree = "<group>"; };
 		388149D71ADDA46E003C0B04 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		388149DB1ADDA46E003C0B04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		388149DC1ADDA46E003C0B04 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		388149DE1ADDA46E003C0B04 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		388149DE1ADDA46E003C0B04 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		388149E11ADDA46E003C0B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		388149E31ADDA46E003C0B04 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		388149E61ADDA46E003C0B04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -77,8 +79,9 @@
 		388149D91ADDA46E003C0B04 /* HelloWorld */ = {
 			isa = PBXGroup;
 			children = (
+				3814158C1AE3FAAE00D09FD6 /* APIController.swift */,
 				388149DC1ADDA46E003C0B04 /* AppDelegate.swift */,
-				388149DE1ADDA46E003C0B04 /* ViewController.swift */,
+				388149DE1ADDA46E003C0B04 /* SearchResultsViewController.swift */,
 				388149E01ADDA46E003C0B04 /* Main.storyboard */,
 				388149E31ADDA46E003C0B04 /* Images.xcassets */,
 				388149E51ADDA46E003C0B04 /* LaunchScreen.xib */,
@@ -212,7 +215,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				388149DF1ADDA46E003C0B04 /* ViewController.swift in Sources */,
+				3814158D1AE3FAAE00D09FD6 /* APIController.swift in Sources */,
+				388149DF1ADDA46E003C0B04 /* SearchResultsViewController.swift in Sources */,
 				388149DD1ADDA46E003C0B04 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,6 +413,7 @@
 				388149F81ADDA46E003C0B04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		388149F91ADDA46E003C0B04 /* Build configuration list for PBXNativeTarget "HelloWorldTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				388149FB1ADDA46E003C0B04 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
